@@ -29,4 +29,9 @@ public class UserDataManager
         string json = JsonUtility.ToJson (Progress);
         PlayerPrefs.SetString (PROGRESS_KEY, json);
     }
+
+    public static bool HasResources (int index)
+    {
+        return index + 1 <= Progress.ResourcesLevels.Count;
+    }
 }
